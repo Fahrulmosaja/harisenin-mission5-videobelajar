@@ -3,11 +3,13 @@ import React, { useState } from 'react';
 import { FaGoogle } from "react-icons/fa";
 import FormInput from '../../Elements/FormInput';
 import Button from '../../Elements/Button';
+import NumberPhone from '../../Elements/FormInput/NumberPhone';
 
 const AuthRegister: React.FC = () => {
   const [formData, setFormData] = useState({
-    text: '',
-    email: '',
+    text: "",
+    email: "",
+    phone: ""
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -18,7 +20,7 @@ const AuthRegister: React.FC = () => {
   };
 
   return (
-    <div className="px-3 mt-25">
+    <div className="px-3 mt-25 mb-15">
       <form className='flex flex-col gap-5 bg-default-white px-5 shadow-md py-6 rounded-md sm:w-1/2 md:w-1/3 mx-auto'>
         <div className="text-center">
           <h1 className="text-2xl text-textDark-primary font-bold tracking-wide font-poppins">Masuk Ke Akun</h1>
@@ -37,6 +39,15 @@ const AuthRegister: React.FC = () => {
           name="email"
           value={formData.email}
           onChange={handleInputChange}
+        />
+
+        <NumberPhone
+          label="No - HP"
+          type="phone"
+          name="phone"
+          value={formData.phone}
+          onChange={handleInputChange}
+          placeholder="+62"
         />
 
         <FormInput

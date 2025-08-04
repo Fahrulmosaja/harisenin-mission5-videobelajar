@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
+import type { FormInputProps } from './types';
 import Label from './Label';
 import Input from './Input';
-import type { FormInputProps } from './types';
 
 const FormInput: React.FC<FormInputProps> = ({
   className,
