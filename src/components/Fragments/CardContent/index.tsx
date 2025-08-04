@@ -12,9 +12,9 @@ const CardContentDashboard = () => {
               src={item.image}
               alt="content-video"
             />
-            <div className='flex flex-col gap-2'>
+            <div className='flex sm:flex-col gap-2'>
               <h1 className='text-xl font-poppins font-semibold'>{item.title}</h1>
-              <p className='text-sm font-normal font-dmsans'>{item.desc}</p>
+              <p className='text-sm font-normal font-dmsans hidden sm:block'>{item.desc}</p>
             </div>
             <div className='flex mt-2 gap-3'>
               <img

@@ -10,6 +10,7 @@ const LIST_BANNER_1 = [
 const LIST_BANNER_2 = [
   {
     image: "/jumbotron/banner-2.jpg",
+    news: "NEWTELLER",
     title: "Mau Belajar Lebih Banyak?",
     desc: "Daftarkan dirimu untuk mendapatkan informasi terbaru dan penawaran spesial dari program-program terbaik hariesok.id",
   },
