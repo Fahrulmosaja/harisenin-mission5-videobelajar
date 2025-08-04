@@ -3,35 +3,53 @@ import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 
 import EachUtils from '../../../utils/EachUtils';
 import { LIST_FOOTER_2 } from '../../../constanst/listFooter';
+import Button from '../../Elements/Button';
 
+
+interface FooterSectionProps {
+  title: string;
+  children: React.ReactNode;
+  className?: string
+}
+
+const FooterSection: React.FC<FooterSectionProps> = ({ title, children }) => {
+  const [isOpen, setIsOpen] = useState(Boolean);
+
+  return (
+    <div className="sm:w-auto w-full mb-4 sm:mb-0 cursor-pointer sm:text-start">
+      <Button
+        variant="btn-default"
+        className="sm:cursor-default w-full flex justify-between sm:block font-semibold mb-2 sm:text-start"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {title}
+        <span className="sm:hidden">{isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}</span>
+      </Button>
+
+      <div className={`sm:block ${isOpen ? 'block' : 'hidden'}`}>
+        {children}
+      </div>
+    </div>
+  );
+}
 
 const FooterList = () => {
-  const [showDown, setShowDown] = useState<number | null>(null);
-
   return (
     <EachUtils
       of={LIST_FOOTER_2}
       render={(item, index) => (
-        <div key={index} className='flex flex-col mt-3'>
-          <button
-            className="bg-main-primary text-white py-2 px-4 rounded-md font-semibold flex justify-between items-center transition-normal"
-            onClick={() => setShowDown(showDown === index ? null : index)}
+        <div key={index} className='flex flex-col mt-3 sm:mt-0'>
+          <FooterSection
+            title={item.title}
           >
-            <span>{item.title}</span>
-            <span>{showDown === index ? <IoIosArrowUp /> : <IoIosArrowDown />}</span>
-          </button>
-          {showDown === index && (
-            <div className="flex flex-col py-2 rounded px-3 gap-2 text-sm text-textDark-primary font-normal font-dmsans bg-main-primary/50">
-              {Array.isArray(item.list) && item.list.map((listItem: string, idx: number) => (
-                <span
-                  className='hover:underline cursor-pointer'
-                  key={idx}
-                >
-                  {listItem}
-                </span>
-              ))}
-            </div>
-          )}
+            <ul>
+              <li>
+                {Array.isArray(item.list) && item.list.map((listItem: string, id: number) => (
+                  <p key={id} className='text-sm font-normal font-dmsans'>{listItem}</p>
+                ))}
+              </li>
+            </ul>
+          </FooterSection>
         </div>
       )}
     />

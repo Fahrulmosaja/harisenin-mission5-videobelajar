@@ -24,14 +24,14 @@ const FooterContent = () => {
                 <p>{item.phone}</p>
               </div>
             </div>
-            <div className="mt-4">
+            <div className="mt-4 sm:flex sm:gap-10 sm:items-start">
               <FooterList />
             </div>
           </div>
 
-          <div className='mt-4 bg-textDark-tertiary h-[2px]'></div>
+          <div className='mt-10 bg-textDark-tertiary h-[2px]'></div>
           <div>
-            <div className=' md:flex-row md:justify-between flex flex-col gap-3 mt-4'>
+            <div className=' md:flex-row md:justify-between flex flex-col gap-4 mt-4'>
               <div className='flex gap-3'>
                 <FaLinkedin className='text-3xl text-textDark-primary hover:text-main-primary cursor-pointer' />
                 <FaFacebookSquare className='text-3xl text-textDark-primary hover:text-main-primary cursor-pointer' />
