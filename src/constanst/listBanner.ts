@@ -1,4 +1,4 @@
-const LIST_JUMBOTRON_1 = [
+const LIST_BANNER_1 = [
   {
     image: "/jumbotron/banner-1.jpg",
     title:
@@ -7,7 +7,7 @@ const LIST_JUMBOTRON_1 = [
   },
 ];
 
-const LIST_JUMBOTRON_2 = [
+const LIST_BANNER_2 = [
   {
     image: "/jumbotron/banner-2.jpg",
     title: "Mau Belajar Lebih Banyak?",
@@ -15,4 +15,4 @@ const LIST_JUMBOTRON_2 = [
   },
 ];
 
-export { LIST_JUMBOTRON_1, LIST_JUMBOTRON_2 };
+export { LIST_BANNER_1, LIST_BANNER_2 };
