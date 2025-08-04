@@ -23,8 +23,8 @@ const AuthRegister: React.FC = () => {
     <div className="px-3 mt-25 mb-15">
       <form className='flex flex-col gap-5 bg-default-white px-5 shadow-md py-6 rounded-md sm:w-1/2 md:w-1/3 mx-auto'>
         <div className="text-center">
-          <h1 className="text-2xl text-textDark-primary font-bold tracking-wide font-poppins">Masuk Ke Akun</h1>
-          <p className="text-sm text-textDark-secondary mt-2">Yuk, lanjutkan belajarmu di VideoBelajar</p>
+          <h1 className="text-2xl text-textDark-primary font-bold tracking-wide font-poppins">Pendaftaran Akun</h1>
+          <p className="text-sm text-textDark-secondary mt-2">Yuk, daftarkan akunmu sekarang juga!</p>
         </div>
         <FormInput
           label="Nama Lengkap"
